@@ -5,12 +5,14 @@ import CMS, { init } from 'netlify-cms-app'
 init({
   config: {
     backend: {
-      name: 'test-repo',
+      name: 'github',
+      repo: 'mhfrancisco/netlify-cms-standalone'
     },
     
     load_config_file: false,
     media_folder: "static/images/uploads",
     public_folder: "/images/uploads",
+
     collections: [
       { label: "Blog", name: "blog", folder: "_posts/blog", create: true, fields: [
         { label: "Title", name: "title", widget: "string" },
